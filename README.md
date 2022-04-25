@@ -34,7 +34,7 @@ As this Action is containerized with Docker, [it can only run on Linux environme
 **NOTICE:** for stability purposes, it is recommended to use the action with an explicit commit SHA-1:
 
 * Version: `uses: "ezworx/action-discord@main"` (&rarr; link to the releases list: https://github.com/ezworx/action-discord/releases)
-* Commit SHA-1: `uses: "ezworx/action-discord@a3694cb1c568605710d87c8e875e34ebbd805d44"` (&rarr; link to the commits list: https://github.com/ezworx/action-discord/commits/main)
+* Commit SHA-1: `uses: "ezworx/action-discord@586bd2ae90ed5aad0a1cbe30b7449de989300752"` (&rarr; link to the commits list: https://github.com/ezworx/action-discord/commits/main)
 
 ### Arguments
 
