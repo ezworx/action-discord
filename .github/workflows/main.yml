@@ -1,0 +1,25 @@
+name: Notification on push
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        DISCORD_USERNAME: KrakenGIT
+        DISCORD_AVATAR: https://i.imgur.com/e3C2ov1.png
+      uses: ezworx/action-discord@main
+      with:
+        args: '🚀 - Commit has been pushed to {{ EVENT_PAYLOAD.repository.full_name }}.\n✨ - Commit: {{ EVENT_PAYLOAD.commits[0].message }}.'
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      uses: ezworx/action-discord@main
